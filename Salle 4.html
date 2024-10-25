@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>La Salle des Codes Cachés</title>
+</head>
+<body>
+    <h1>Bienvenue dans la Salle des Codes Cachés</h1>
+    <p>Un mystère se cache ici…</p>
+    <!-- Le code secret est: TERRIFIANT -->
+
+    <div style="display: none;">
+        <!-- Ce texte est caché dans le code -->
+        <p>Indice : Cherchez dans le code pour trouver votre chemin</p>
+    </div>
+
+    <button onclick="reveler()">Cliquez ici pour révéler le secret</button>
+    <script>
+       function reveler() {
+            alert("Cherchez dans les commentaires du code source pour trouver le mot de passe !");
+            let audio = document.getElementById("background-sound");
+            audio.play();
+        }
+    </script>
+
+    <!-- Audio en boucle -->
+    <audio id="background-sound" loop>
+        <source src="clic.mp3" type="audio/mpeg">
+        <!-- Fallback text si le navigateur ne supporte pas la balise audio -->
+        Votre navigateur ne supporte pas l'audio HTML5.
+    </audio>
+
+</body>
+</html>
